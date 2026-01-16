@@ -10,7 +10,16 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #0b1120;
+      background: 
+        linear-gradient(135deg, rgba(2,6,23,0.95), rgba(15,23,42,0.95)),
+        repeating-linear-gradient(
+          45deg,
+          rgba(56,189,248,0.05),
+          rgba(56,189,248,0.05) 2px,
+          transparent 2px,
+          transparent 6px
+        );
+      background-attachment: fixed;
       color: #e5e7eb;
     }
     header {
@@ -18,7 +27,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #020617, #0f172a);
+      background:
+        radial-gradient(circle at top left, rgba(56,189,248,0.15), transparent 40%),
+        radial-gradient(circle at bottom right, rgba(14,165,233,0.12), transparent 40%),
+        linear-gradient(135deg, #020617, #0f172a);
       padding: 40px 20px;
     }
     .hero {
@@ -83,6 +95,16 @@
     }
     nav a:hover { color: #38bdf8; }
     section {
+      background:
+        linear-gradient(180deg, rgba(2,6,23,0.85), rgba(2,6,23,0.95)),
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"><path d="M0 40h80M40 0v80" stroke="rgba(56,189,248,0.05)" stroke-width="1"/></svg>');
+      border-radius: 20px;
+      margin-top: 40px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 90px 25px;
+    }
       max-width: 1100px;
       margin: auto;
       padding: 90px 20px;
@@ -98,6 +120,15 @@
       gap: 25px;
     }
     .card {
+      background: linear-gradient(135deg, #020617, #020617 60%, rgba(56,189,248,0.08));
+      padding: 25px;
+      border-radius: 16px;
+      border: 1px solid rgba(56,189,248,0.25);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.6s ease;
+    }
       background: #020617;
       padding: 25px;
       border-radius: 14px;
@@ -154,21 +185,39 @@
 <section id="skills">
   <h3>Skills & Expertise</h3>
   <div class="grid">
-    <div class="card">📞 Phone / WhatsApp: +8801738253925</div>
-    <div class="card">✉️ Email: foridmolla532@gmail.com</div>
-    <div class="card">🔗 LinkedIn: <a href="https://www.linkedin.com/in/forid-molla-27573438b" target="_blank" style="color:#38bdf8;">View Profile</a></div>
-    <div class="card">📘 Facebook: <a href="https://www.facebook.com/bappy.hossen532" target="_blank" style="color:#38bdf8;">Visit</a></div>
-    <div class="card">📸 Instagram: <a href="https://www.instagram.com/bappi_hossein" target="_blank" style="color:#38bdf8;">Visit</a></div>
+    <div class="card">⚙️ Programmable Logic Controller (PLC)</div>
+    <div class="card">🖥️ Human Machine Interface (HMI)</div>
+    <div class="card">🔄 Variable Frequency Drive (VFD)</div>
+    <div class="card">📊 Supervisory Control and Data Acquisition (SCADA)</div>
+    <div class="card">🔌 Industrial Manual Controlling</div>
+    <div class="card">🌐 Profinet, EtherNet/IP, DeviceNet</div>
+    <div class="card">🤖 Servo & Stepper Drives</div>
+    <div class="card">🏭 ETP Automation</div>
+    <div class="card">💧 WTP Automation</div>
+    <div class="card">🔧 Arduino</div>
+    <div class="card">📷 Photography</div>
   </div>
 </section>
 
 <section id="projects">
   <h3>Projects</h3>
   <div class="grid">
-    <div class="card">🏭 ETP Plant Automation</div>
-    <div class="card">🚰 Booster Pump System</div>
-    <div class="card">🧪 Ultra Filtration System</div>
-    <div class="card">💦 Submersible Pump Control System</div>
+    <div class="card">
+      <strong>ETP Plant Automation</strong><br>
+      Process automation for effluent treatment plants including pH, DO and flow monitoring with SCADA integration and alarm management for safe and compliant operation.
+    </div>
+    <div class="card">
+      <strong>Booster Pump System</strong><br>
+      PLC–HMI based automatic pressure control system featuring pump alternation logic, dry-run protection and stable water distribution.
+    </div>
+    <div class="card">
+      <strong>Ultra Filtration System</strong><br>
+      Automated filtration and backwash sequence developed using PLC logic with safety interlocking to ensure reliable and continuous operation.
+    </div>
+    <div class="card">
+      <strong>Submersible Pump Control System</strong><br>
+      Level-based automatic ON/OFF control using float sensors integrated with VFDs to improve energy efficiency and equipment life.
+    </div>
   </div>
 </section>
 
@@ -177,7 +226,8 @@
   <div class="grid">
     <div class="card">
       <strong>Junior Service Engineer & Trainer</strong><br>
-      Tech Lab Bangladesh Engineering
+      Tech Lab Bangladesh Engineering<br>
+      <small>September 2025 – Present</small>
     </div>
   </div>
 </section>
@@ -195,6 +245,8 @@
     <div class="card">📞 Phone / WhatsApp: +8801738253925</div>
     <div class="card">✉️ Email: foridmolla532@gmail.com</div>
     <div class="card">🔗 LinkedIn: <a href="https://www.linkedin.com/in/forid-molla-27573438b" target="_blank" style="color:#38bdf8; text-decoration:none;">View Profile</a></div>
+    <div class="card">📘 Facebook: <a href="https://www.facebook.com/bappy.hossen532" target="_blank" style="color:#38bdf8; text-decoration:none;">facebook.com/bappy.hossen532</a></div>
+    <div class="card">📸 Instagram: <a href="https://www.instagram.com/bappi_hossein" target="_blank" style="color:#38bdf8; text-decoration:none;">instagram.com/bappi_hossein</a></div>
   </div>
 </section>
 
