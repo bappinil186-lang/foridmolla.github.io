@@ -42,10 +42,10 @@
 
     /* ===== SECTIONS FIX ===== */
     section {
-      min-height: 100vh;
-      padding: 110px 8% 70px;
-      scroll-margin-top: 90px;
-    }
+  min-height: auto;
+  padding: 80px 8% 60px;
+  scroll-margin-top: 80px;
+}
 
     h3 {
       font-size: 28px;
@@ -89,19 +89,25 @@
       background: #020617;
       border-top: 1px solid #1e293b;
     }
-  </style>/* === SECTION SCROLL FIX === */
+  
+    /* TYPE ANIMATION */
+    .type {
+      overflow: hidden;
+      border-right: 3px solid #38bdf8;
+      white-space: nowrap;
+      animation: typing 3s steps(20), blink 0.7s infinite;
+      width: max-content;
+    }
 
-section {
-  scroll-margin-top: 85px;
-  padding-top: 80px;
-  padding-bottom: 60px;
-}
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
 
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}
-
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+  </style>
 </head>
 <body>
 
@@ -119,14 +125,19 @@ html {
 
   <!-- HOME -->
   <section id="home">
-    <div class="hero">
-      <img src="web.jpeg" alt="Forid Molla" />
-      <div>
-        <h1>Forid Molla</h1>
-        <p>Industrial Automation Engineer | PLC • HMI • VFD • SCADA</p>
-      </div>
+  <div class="hero">
+    <img src="web.jpeg" alt="Forid Molla" />
+    <div>
+      <h1 class="type">Forid Molla</h1>
+      <p class="subtitle">Industrial Automation Engineer</p>
+      <p>
+        Specialized in PLC, HMI, VFD & SCADA based industrial automation systems.
+        I work with real factory processes like ETP, WTP, Pump Control and
+        Energy Efficient Motor Automation.
+      </p>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- ABOUT -->
   <section id="about">
@@ -179,4 +190,3 @@ html {
 
 </body>
 </html>
-
